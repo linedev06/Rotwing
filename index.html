@@ -47,7 +47,7 @@
    hr {
     border-color: #4a4538;
    }
-   /* Scrollbar for dark theme */
+ 
    ::-webkit-scrollbar {
     width: 8px;
    }
@@ -58,7 +58,7 @@
     background-color: #7a6a3d;
     border-radius: 10px;
    }
-   /* Responsive typography */
+
    @media (max-width: 640px) {
     h1 {
      font-size: 2.5rem;
@@ -70,7 +70,7 @@
      font-size: 1.25rem;
     }
    }
-   /* Epic profane animation overlay */
+
    #epicOverlay {
     position: fixed;
     top: 0;
@@ -96,7 +96,7 @@
      box-shadow: 0 0 50px 20px rgba(198, 156, 93, 1);
     }
    }
-   /* Flame flicker effect */
+   
    .flame-flicker {
     animation: flicker 0.15s infinite alternate;
    }
@@ -110,7 +110,7 @@
      filter: drop-shadow(0 0 12px #d7cfa3);
     }
    }
-   /* Glitch text effect */
+
    .glitch {
     position: relative;
     color: #c9b99a;
@@ -192,7 +192,7 @@
      transform: translate(0);
     }
    }
-   /* Responsive adjustments for buttons and text */
+
    @media (max-width: 640px) {
     .entity-btn {
      padding: 0.5rem 1rem !important;
@@ -486,7 +486,7 @@
   </div>
 
   <script>
-   // Heartbeat counter logic with epic event
+   
    (() => {
     const startBtn = document.getElementById('startHeartBtn');
     const resetBtn = document.getElementById('resetHeartBtn');
@@ -510,23 +510,20 @@
     }
 
     function showEpicEvent() {
-      // Show overlay
+ 
       epicOverlay.style.display = 'flex';
 
-      // Darken background with flickering shadows and invert colors
+    
       document.body.style.backgroundColor = '#1a1200';
       document.body.style.transition = 'background-color 2s ease';
 
-      // Add flickering flame effect to main heading
       const heading = document.querySelector('h1.glitch');
       heading.classList.add('flame-flicker');
 
-      // Add subtle shaking effect to main content
+    
       const main = document.querySelector('main');
       main.style.animation = 'shake 0.3s ease-in-out infinite alternate';
 
-      // Add epic sound effect (optional)
-      // For demo, we won't add audio to keep it simple and self-contained
     }
 
     function hideEpicEvent() {
@@ -552,7 +549,7 @@
         counting = true;
         startBtn.textContent = 'Pausar Contagem';
         startBtn.setAttribute('aria-pressed', 'true');
-        intervalId = setInterval(incrementCount, 600); // 600ms ~ 100bpm
+        intervalId = setInterval(incrementCount, 600);
       } else {
         counting = false;
         startBtn.textContent = 'Iniciar Contagem';
@@ -573,7 +570,6 @@
       hideEpicEvent();
     });
 
-    // Shake animation keyframes injected dynamically
     const style = document.createElement('style');
     style.textContent = `
       @keyframes shake {
@@ -587,7 +583,6 @@
     document.head.appendChild(style);
    })();
 
-   // Entity explorer logic
    (() => {
     const descriptions = {
       columba:
@@ -609,14 +604,12 @@
     });
    })();
 
-   // Grain translation logic (symbolic)
+  
    (() => {
     const form = document.getElementById('grainForm');
     const input = document.getElementById('grainInput');
     const output = document.getElementById('grainOutput');
 
-    // Simple symbolic translation: each letter replaced by a glyph from a made-up alphabet
-    // For demonstration, map letters to Unicode runes or similar symbols
     const symbolMap = {
       a: 'ᚨ',
       b: 'ᛒ',
